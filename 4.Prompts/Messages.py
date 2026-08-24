@@ -13,4 +13,5 @@ messages = [
 result = model.invoke(messages)
 messages.append(AIMessage(content= result.content))
 
-print(messages)
+print(messages) 
+#messages help to label the messages into 3 type (system, ai, human)
