@@ -1,6 +1,8 @@
 from typing import Optional
 from pydantic import BaseModel
 
+
+
 class Student(BaseModel):
     name : str = 'john' #default value if no value is provided
     age :Optional[int] = None #optional value if no value is provided
