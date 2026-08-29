@@ -18,7 +18,7 @@ template1 = PromptTemplate(
     input_variables = ['topic']
 )
 
-#summy report
+#summary report
 
 template2 = PromptTemplate(
     template ='write a summary report on the following topic: {topic}',
@@ -27,6 +27,6 @@ template2 = PromptTemplate(
 
 parser = StrOutputParser()
 
-chain = template1  | model | parser | template2 | model | parser
+chain = template1  | model | parser | template2 | model | parser #it will help to get the content from the result in parser and send it to next template and model, without making new chain for each step
 
 chain.invoke({'topic':'Climate Change'})
